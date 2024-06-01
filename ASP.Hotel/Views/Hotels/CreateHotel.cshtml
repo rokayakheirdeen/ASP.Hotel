@@ -1,0 +1,48 @@
+﻿<div class="container mt-4 form-container">
+    <h2>Create a New Hotel</h2>
+
+    <form asp-action="AddHotel" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="Name" name="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <textarea class="form-control" id="Description" name="Description" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="Phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="Phone" name="Phone" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="Rooms" class="form-label">Rooms</label>
+                    <input type="number" class="form-control" id="Rooms" name="Rooms" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="Location" name="Location" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Rating" class="form-label">Rating</label>
+                    <select class="form-control" id="Rating" name="Rating" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="ImgURL" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="ImgURL" name="ImgURL" required>
+        </div>
+        <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+
+</div>

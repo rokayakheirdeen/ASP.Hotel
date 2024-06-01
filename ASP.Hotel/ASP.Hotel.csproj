@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="C:\Users\96170\Desktop\Ass3RokayaKheirdeeen10121305-Rayhana10121305.cs" Link="Ass3RokayaKheirdeeen10121305-Rayhana10121305.cs" />
+  </ItemGroup>
+
+</Project>

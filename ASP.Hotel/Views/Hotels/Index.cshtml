@@ -1,0 +1,45 @@
+﻿<style>
+    .gold-star {
+        color: gold;
+    }
+    </style>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="mb-4">Hotels List</h2>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-controller="Hotels" asp-action="CreateHotel" class="btn btn-primary">Add New Hotel</a>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var hotel in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="@hotel.ImgURL" class="card-img-top" alt="Hotel Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@hotel.Name</h5>
+                        <p class="card-text">@hotel.Description</p> <!-- Display hotel description -->
+                        <p class="card-text">
+                            @for (int i = 0; i < hotel.Rating; i++)
+                            {
+                                <i class="fa fa-star gold-star" aria-hidden="true"></i>
+                            }
+                        </p>
+                        <p class="card-text">@hotel.Location</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group" role="group">
+                            <a asp-controller="Hotels" asp-action="Details" asp-route-id="@hotel.HotelId" class="btn btn-primary">View</a>
+                            <form asp-controller="Hotels" asp-action="Delete" asp-route-id="@hotel.HotelId" method="post" onsubmit="return confirm('Are you sure you want to delete this hotel?')">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
